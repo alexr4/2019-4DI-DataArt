@@ -41,7 +41,7 @@ void draw() {
   float normTime = modTime / maxTime;
   float easing = sin(normTime * TWO_PI);
   float pingpongtime = 1.0 - abs(normTime * 2.0 -1.0);
-  float pingpongeased = 1.0 - abs(easing);
+  float pingpongeased = 1;//1.0 - abs(easing);
 
   //get the actual name 
 

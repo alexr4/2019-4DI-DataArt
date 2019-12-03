@@ -45,6 +45,7 @@ void setup() {
   }
 
   int i = 0;
+  println(tmpspecies.size());
   for (Map.Entry entry : tmpspecies.entrySet()) {
     String specie = (String) entry.getKey();
     float hue = round(map(i, 0, tmpspecies.size(), 0, 200));
