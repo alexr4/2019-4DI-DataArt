@@ -1,0 +1,86 @@
+/**
+JSON format explanation
+
+What's a JSON
+JSON stands for JavaScript Object Notation, it's a data format designed to represents 
+structured informations (like XML of YAML). It's used in a large range of projects
+from the web to stand alone application.
+
+A JSON document can have multiple JSONObject and JSONArray array.
+
+What's a JSONObject
+A JSONObject is an unordered collection of name/value paris, for exemple :
+
+"name" : "Alex"
+
+Here the JSONObject has a key "name" and a value "Alex". The key is the name of the variable.
+A JSONObject can store different data type such as String, number (float, integer, double, long),
+boolean, JSONObject and Array.
+
+The JSON is based on object paradigm, which mean a JSONObject can store different JSONObject 
+in order to described a simple object. When a JSONObject stroe more than one value, its wrapped
+in brackets. For example : 
+
+"person" :{
+    "name"   : "Alex",
+    "age"    : 32,
+    "height" : 1.8
+}
+
+What's a JSONArray
+A JSONArray is a ordered sequence of values from the same datatype. These values can be String, number (float, integer, double, long),
+boolean, JSONObject and Array. The values stored in an JSONArray are wrapped between square brackets.
+For Examples
+
+"persons" : [
+    {   
+        "name"   : "John",
+        "age"    : 25,
+        "height" : 1.7
+    },
+    {
+        "name"   : "Mick",
+        "age"    : 26,
+        "height" : 1.8
+    },
+    {
+        "name"   : "Helen",
+        "age"    : 24,
+        "height" : 1.65
+    }
+]
+
+Our data set
+Our dataset is structured as a JSONArray of JSONObject where each JSONObject described a tree
+Each tree is described with 5 JSONObjects :
+
+→ "datasetid" : the id of our dataset
+→ "recordid" : the unique id of the tree
+→ "fields" : JSONObject describing the tree
+→ "geometry" : JSONObject the geometry of the tree (geographic cooridnates)
+→ "record_timestamp" : date of the record
+
+The field JSONObject has differents values :
+→ "geom_x_y": [
+        48.8320775848,
+        2.41181713566
+            ],
+→ "libellefrancais": "If",
+→ "objectid": 24896,
+→ "idemplacement": "12-08",
+→ "arrondissement": "BOIS DE VINCENNES",
+→ "circonferenceencm": 101,
+→ "hauteurenm": 5,
+→ "espece": "baccata",
+→ "adresse": "ILE DE BERCY / LAC DAUMESNIL",
+→ "domanialite": "Jardin",
+→ "pepiniere": "Inconnue",
+→ "stadedeveloppement": "A",
+→ "remarquable": "1",
+→ "idbase": 2002362,
+→ "genre": "Taxus",
+→ "complementadresse": "12-08",
+→ "typeemplacement": "Arbre",
+→ "dateplantation": "1870-01-01T01:02:49+00:53"
+
+**/
